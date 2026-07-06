@@ -170,3 +170,47 @@ Requirements:
 Possible files to modify:
 - `Main.java`
 - `Game.java`
+---
+### Issue #5: Add Unit Tests
+The current project does not include automated tests. Add a testing setup and write unit tests for the main game logic.
+
+Requirements:
+- Add a Java testing framework such as JUnit.
+- Create a `test/` directory for test files.
+- Add instructions in the README for running tests.
+- Write tests for important game behavior.
+
+Possible behavior to test:
+- A correct letter guess reveals the matching letters.
+- A wrong letter guess increases the error count.
+- A repeated guess does not increase the error count again.
+- The game correctly detects when the word has been found.
+- Multi-word city names are handled correctly, if that feature has been added.
+- Full city guesses work correctly, if that feature has been added.
+
+Possible files to modify:
+- `Game.java`
+- `Dictionary.java`
+- `README.md`
+- New test files
+---
+### Issue #6: Add a Scoreboard
+Add a scoreboard that tracks the player's performance across multiple rounds.
+
+This feature should be implemented after replay mode is added, since the scoreboard should track results across repeated games in the same program session.
+
+Requirements:
+- Track the number of games played.
+- Track the number of games won.
+- Track the number of games lost.
+- Display the scoreboard after each round.
+- The scoreboard only needs to persist during the current program run; it does not need to be saved after the program exits.
+
+Example:
+
+```text
+Scoreboard
+-----------
+Games played: 3
+Wins: 2
+Losses: 1
