@@ -7,8 +7,12 @@ public class Main {
         System.out.println("=======================================");
         int stateSet = chooseState();
 
+        Scanner input = new Scanner(System.in);
+        Scoreboard scoreboard = new Scoreboard();
+
+        Game game = new Game(input, scoreboard, stateSet);
         System.out.println("\nLet's play Hangman!");
-        Game game = new Game(stateSet);
+    
         game.newGame();
         game.play();
     }
